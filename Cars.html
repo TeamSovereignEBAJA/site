@@ -1,27 +1,104 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>CARS</title>
-  </head>
-  <style>
+<head>
+    <style>
+        body {
+            background: linear-gradient(135deg, yellow, blue);
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            animation: colorChange 10s infinite alternate;
+        }
 
-*{ background-color:wheat}
-  .container {
-    align-items: right;
-    justify-content: right;
-  }
-  </style>
+        @keyframes colorChange {
+            0% {
+                background: linear-gradient(135deg, yellow, blue);
+            }
+            25% {
+                background: linear-gradient(135deg, yellow, red);
+            }
+            50% {
+                background: linear-gradient(135deg, yellow, green);
+            }
+            75% {
+                background: linear-gradient(135deg, yellow, purple);
+            }
+            100% {
+                background: linear-gradient(135deg, yellow, blue);
+            }
+        }
 
-  <body>
-    <h1>ALL ELECTRIC ATVs OF 2017-19 and 2022.</h1>
-    <div class="container">
-      <div class="image">
-        "1."
-        <img src="DSC_0014.JPG" height="500">
-        "2017 1ST ATV MADE BY TEAM SOVEREIGN ."
-      </div>
-      <div class="text">
-      </div>
+        .car {
+            width: 30%;
+            display: inline-block;
+            text-align: center;
+            margin: 10px;
+            background-color: white;
+            border: 2px solid #3498db;
+            padding: 10px;
+            position: relative;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        .car img {
+            max-width: 100%;
+            border: 1px solid #3498db;
+            border-radius: 10px;
+        }
+
+        .wave-frame {
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            background-image: url('wave-pattern.png'); /* Add your wavy pattern image */
+            background-size: cover;
+            z-index: -1;
+        }
+
+        h2, p {
+            margin: 10px 0;
+        }
+
+        h2 {
+            animation: blink 2s infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="car">
+        <div class="wave-frame"></div>
+        <img src="Diablo.jpg" alt="Car 1">
+        <h2>Diablo (2019)</h2>
+        <b><p>The Survivor</p></b>
+        <p>The Car in which Differential Gearbox was used.</p>
     </div>
-  </body>
+    <div class="car">
+        <div class="wave-frame"></div>
+        <img src="phoenix.jpg" alt="Car 2">
+        <h2>PHOENIX</h2>
+        <p>Robust ONE</p>
+        <p>AIR 1 in DESIGN</p>
+    </div>
+    <div class="car">
+        <div class="wave-frame"></div>
+        <img src="image-hero.jpg" alt="Car 3">
+        <h2>ATREUS</h2>
+        <p>Most Loved Car</p>
+        <p>Overall Champion For Us. &hearts;</p>
+    </div>
+</body>
 </html>
