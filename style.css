@@ -124,7 +124,7 @@ html {
 
 body {
   background-color: var(--white);
-  color: var(--eerie-black);
+  color:var(--black);
   font-size: 1.6rem;
   line-height: 1.5;
 }
