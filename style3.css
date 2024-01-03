@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.background-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    animation: backgroundAnimation 10s infinite alternate; /* Adjust the animation duration as needed */
+}
+
+.pink-shade {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(238, 176, 5, 0.7), rgba(5, 25, 177, 0.7)); /* Pink shade */
+    z-index: -1;
+}
+
+.bubble {
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    width: 150px; /* Adjust the size of the bubble as needed */
+    height: 150px; /* Adjust the size of the bubble as needed */
+    animation: bubbleAnimation 2s infinite alternate;
+    margin: 20px; /* Adjust the margin as needed */
+}
+
+.bubble img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.info {
+    text-align: left;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: white;
+}
+
+.info h1 {
+    text-align: center;
+}
+
+@keyframes colorChange {
+    0% {
+        background: linear-gradient(135deg, yellow, blue);
+    }
+    25% {
+        background: linear-gradient(135deg, yellow, red);
+    }
+    50% {
+        background: linear-gradient(135deg, yellow, green);
+    }
+    75% {
+        background: linear-gradient(135deg, yellow, purple);
+    }
+    100% {
+        background: linear-gradient(135deg, yellow, blue);
+    }
+}
+
+@keyframes bubbleAnimation {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+  
